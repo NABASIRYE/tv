@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>television</title>
+    <style>
+        body{
+            display: flex;
+        }
+        #app{
+            margin: auto;
+        }
+        .tv{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .screen{
+            width: 550px;
+            height: 290px;
+            background-color: rgb(58, 54, 54);
+            margin: 50px;
+            border-radius: 5px;
+        }
+        .scree{
+          
+            margin: 10px;
+            
+        }
+        button{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: red;
+            border-color: white;
+            margin-bottom: 10px;
+        }
+        .scr{
+            margin: auto;
+            
+        }
+        h1{
+            color: red;
+        }
+        .baton{
+            margin-left: 600px;
+        }
+        .btn{
+            margin-left: 550px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="app">
+<div class="tv" v-if="signal">
+    <div class="scr">
+        
+    <div class="scree">
+    <video controls autoplay class="vide">
+        <source src="vid.mp4" type="video/mp4">
+    </video>
+    </div>
+    <button v-on:click="toggle" class="baton">
+
+    </button>
+</div>
+</div>
+
+
+
+
+<div class="tv" v-else="signal">
+    <div class="scr">
+    <div class="screen">
+
+    </div>
+    <button v-on:click="toggle" class="btn">
+
+    </button>
+</div>
+</div>
+
+
+
+    </div>
+</body>
+<script src="vue.js"></script>
+<script src="loy.js"></script>
+</html>
